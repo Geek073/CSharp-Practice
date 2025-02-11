@@ -1,0 +1,39 @@
+Console.WriteLine("Console Calculator in C#\r");
+Console.WriteLine("------------------------\n");
+int num1=0;
+int num2=0;
+Console.WriteLine("Enter the first number: ");
+num1=Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter the second number: ");
+num2= Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Choose an option from the following list:");
+Console.WriteLine("+ - Addition");
+Console.WriteLine("- - Subtraction");
+Console.WriteLine("* - Multiplication");
+Console.WriteLine("/ - Division");
+Console.Write("Your option? ");
+switch (Console.ReadLine())
+{
+    case "+":
+        Console.WriteLine($"Your result: {num1} + {num2} = " + (num1 + num2));
+        break;
+    case "-":
+        Console.WriteLine($"Your result: {num1} - {num2} = " + (num1 - num2));
+        break;
+    case "*":
+        Console.WriteLine($"Your result: {num1} * {num2} = " + (num1 * num2));
+        break;
+    case "/":
+        if (num2 != 0)
+        {
+            Console.WriteLine($"Your result: {num1} / {num2} = " + (num1 / num2));
+        }
+        else
+        {
+            Console.WriteLine("Division by 0 is not allowed");
+        }
+        break;
+}
+Console.Write("Press any key to close the console calculator");
+Console.ReadKey();
+
